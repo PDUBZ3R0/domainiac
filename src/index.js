@@ -20,7 +20,6 @@
 			let tld = parts[parts.length-1];
 			let sld = parts[parts.length-2];
 			let c = country(tld);
-			if (c === "uk") c = "gb";
 			let domain, subs, showsld;
 			
 			let slmatch = sldata[tld];
