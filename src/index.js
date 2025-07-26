@@ -4,8 +4,10 @@
 	const zaschool = require("./za-school.json");
 
 	function country(tld) {
-		if ((tld.length == 2 && co[tld]) || ["eu","ac","uk", "africa"].includes(tld)) {
-			return tld;
+		if ((tld.length == 2 && co[tld]) || ["eu", "ac", "uk", "africa"].includes(tld)) {
+			let c = tld;
+			if (c === "uk") c = "gb";
+			return c;
 		} else {
 			return "us";
 		}
@@ -18,6 +20,7 @@
 			let tld = parts[parts.length-1];
 			let sld = parts[parts.length-2];
 			let c = country(tld);
+			if (c === "uk") c = "gb";
 			let domain, subs, showsld;
 			
 			let slmatch = sldata[tld];
@@ -69,6 +72,10 @@
 			let parts = hostname.toLowerCase().trim().split(".");
 			let tld = parts[parts.length-1];
 			return country(tld);
+		},
+
+		countryNames() {
+			return co;
 		}
 	}
 }
