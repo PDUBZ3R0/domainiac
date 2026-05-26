@@ -1,10 +1,21 @@
 {
   "name": "domainiac",
-  "version": "0.9.2",
+  "version": "20.26.05",
   "main": "src/index.js",
   "license": "MIT",
   "description": "utility for parsing domains",
+  "type": "module",
+  "scripts": {
+    "update": "node task/index.js && task/publish.sh"
+  },
   "bin": {
     "domainiac": "src/cli.js"
+  },
+  "devDependencies": {
+    "json5": "^2.2.3",
+    "toltha": "../toltha"
+  },
+  "dependencies": {
+    "tldts": "^7.4.0"
   }
 }
