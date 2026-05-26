@@ -334,6 +334,20 @@ export const secondLevels = {
 
 export const zaSchools = [ "ecape", "fs", "gp", "kzn", "mpm", "ncape", "lp", "nw", "wcape" ]
 
+/* Geographical / Regional TLDs (with country when more specific)
+	 tld: iso-2 */
+export const geoTlds = {
+	"asia": null, 
+	"eu": null,
+	"africa": null,
+	"wales": "gb",
+	"irish": "ie",
+	"scot": "gb",
+	"uk": "gb",
+	"ac": null
+}
+
+/*
 export const regionalTlds = {
   "africa": {
   	"tld": "africa", "code": "af",
@@ -351,3 +365,4 @@ export const regionalTlds = {
 		"rs" "sk" "si" "es" "se" "ch" "ua" "gb" "va" "rs"]
   }
 }
+*/
